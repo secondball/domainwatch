@@ -1,0 +1,21 @@
+[package]
+name = "certwatch"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+sqlx = { version = "0.7", features = ["runtime-tokio", "sqlite", "chrono"] }
+chrono = { version = "0.4", features = ["serde"] }
+anyhow = "1"
+thiserror = "1"
+serde = { version = "1", features = ["derive"] }
+rustls = { version = "0.23", features = ["ring"] }
+rustls-native-certs = "0.7"
+tokio-rustls = "0.26"
+webpki-roots = "0.26"
+x509-parser = "0.16"
+hickory-resolver = "0.24"
+reqwest = { version = "0.12", features = ["rustls-tls", "json"] }
+ratatui = "0.28"
+crossterm = "0.28"
